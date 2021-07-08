@@ -42,7 +42,7 @@ const config = {
       display: 'standalone',
       icons: [
         {
-          src: path.resolve('public/assets/icons/icon-512x512.png'),
+          src: path.resolve(__dirname, 'public/assets/icons/icon-512x512.png'),
           sizes: [72, 96, 128, 192, 256, 384, 512],
           destination: path.join('assets', 'icons'),
         },
