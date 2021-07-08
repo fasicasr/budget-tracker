@@ -10,7 +10,7 @@ const config = {
     // topic: './assets/js/topic.js',
   },
   output: {
-    path: __dirname + 'public/dist',
+    path: __dirname + '/public/dist',
     filename: 'bundle.js',
   },
   mode: 'production',
@@ -31,6 +31,7 @@ const config = {
   plugins: [
     new WebpackPwaManifest({
       fingerprints: false,
+      inject: false,
       name: 'Budget Tracker',
       short_name: 'Budget Tracker',
       description: 'A budget tracking app that runs offline',
@@ -38,6 +39,7 @@ const config = {
       theme_color: "#ffffff",
       // 'theme-color': '#36465d;',
       start_url: '/',
+      display: 'standalone',
       icons: [
         {
           src: path.resolve('public/assets/icons/icon-512x512.png'),
