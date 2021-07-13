@@ -4,14 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:dev": "concurrently \"npm run server\" \"cd client && npm run start\"",
-    "server": "nodemon server.js --ignore client",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lite-server": "lite-server",
-    "build": "npm run webpack",
-    "webpack": "webpack",
-    "start:prod": "npm run build && node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
