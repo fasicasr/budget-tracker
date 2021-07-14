@@ -22,9 +22,8 @@ const FILES_TO_CACHE = [
 
 
 const STATIC_CACHE = "static-cache-v1";
-const RUNTIME_CACHE = "runtime-cache-v1";
+const RUNTIME_CACHE = "runtime-cache";
 
-//installing 
 self.addEventListener("install", event => {
   event.waitUntil(
     caches
@@ -34,7 +33,7 @@ self.addEventListener("install", event => {
   );
 });
 
-// Clear old cache
+// The activate handler takes care of cleaning up old caches.
 self.addEventListener("activate", event => {
   const currentCaches = [STATIC_CACHE, RUNTIME_CACHE];
   event.waitUntil(
@@ -68,10 +67,10 @@ self.addEventListener("fetch", event => {
   }
 
   // handle runtime GET requests for data from /api routes
-  if (event.request.url.includes("/api/images")) {
+  if (event.request.url.includes("/api/transaction")) {
     // make network request and fallback to cache if network request fails (offline)
     event.respondWith(
-      caches.open(RUNTIME).then(cache => {
+      caches.open(RUNTIME_CACHE).then(cache => {
         return fetch(event.request)
           .then(response => {
             cache.put(event.request, response.clone());
