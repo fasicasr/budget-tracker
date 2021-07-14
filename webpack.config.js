@@ -6,8 +6,7 @@ console.log("HII")
 const config = {
   entry: {
     app: './public/assets/js/index.js',
-    // favorites: './assets/js/favorites.js',
-    // topic: './assets/js/topic.js',
+  
   },
   output: {
     path: __dirname + '/public/dist',
