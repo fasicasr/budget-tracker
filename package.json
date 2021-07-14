@@ -4,8 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "npm run webpack"
+    "start": "npm run webpack & node server.js"
   },
   "repository": {
     "type": "git",
