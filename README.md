@@ -7,7 +7,7 @@ This Progressive Web Application (PWA) enables users to manage their personal bu
 
 ## Application Display  
 
-Try the app yourself - [Here](https://fsr-budget-tracker.herokuapp.com/)
+Try the app - [Here](https://fsr-budget-tracker.herokuapp.com/)
 
 Online view:
 ![Application image](/images/online.png)
